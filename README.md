@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Luminous Precision Psychology
 
-## Getting Started
+Luminous, zihinsel iyi oluş ve psikoloji alanında hizmet veren klinikler için tasarlanmış ultra-premium bir web platformudur. Amaç yalnızca bilgi veren bir kurumsal site üretmek değil; kullanıcıya sakin, güven veren, mekansal derinliği olan ve Apple lansmanı hissiyatına yaklaşan rafine bir dijital deneyim sunmaktır.
 
-First, run the development server:
+Platform; akışkan kaydırma, manyetik arayüz davranışları, cam efektleri, nöro-akustik mikro etkileşimler ve dikkatli katmanlanmış görsel atmosfer ile modern psikoloji hizmetlerini daha güçlü ve seçkin bir çerçevede sunar.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Deneyim Vizyonu
+
+Bu proje standart bir klinik web sitesi gibi ele alınmamalıdır. Luminous; hız, sadelik, premium görsel dil ve duyusal mikro etkileşimlerin birlikte çalıştığı bir deneyim sistemidir.
+
+- Kullanıcıyı yormayan, açık ve ferah bir görsel atmosfer.
+- Psikoloji ve wellness alanına yakışan güven, sakinlik ve kalite hissi.
+- Metin, hareket, ses ve katmanların birbirini tamamladığı bütünlüklü bir arayüz.
+- Gereksiz süs yerine ölçülü, işlevsel ve rafine animasyonlar.
+
+## Öne Çıkan Özellikler
+
+- **Lenis Smooth Scroll:** Sayfa geçişlerinde fiziksel ağırlık hissi veren akışkan kaydırma deneyimi.
+- **Magnetic UI:** Ana butonlarda fareyi takip eden, yumuşak ve doğal manyetik hareket.
+- **Nöro-Akustik Ses Motoru:** Web Audio API ile üretilen hover ve tıklama sesleri. Harici `.mp3` yüküne ihtiyaç duymaz.
+- **Mobil Haptic Geri Bildirim:** Destekleyen cihazlarda tıklama etkileşimlerini fiziksel titreşim hissiyle güçlendirir.
+- **Glassmorphism Paneller:** `glass-panel` sınıfı ile tutarlı, aydınlık ve premium cam yüzeyler.
+- **Dinamik Border Spotlight:** Cam yüzeylerde fareyi takip eden kristal kenar ışığı.
+- **Hero Video Atmosferi:** `public/videos/hero-bg.mp4` ile üst bölümde sakin ve derinlikli video arka planı.
+- **Nöro-Estetik Parçacıklar ve Dalgalar:** Arka planda nefes hızında hareket eden hafif görsel katmanlar.
+
+## Teknoloji Yığını
+
+- **Framework:** Next.js 16 App Router
+- **Dil:** TypeScript
+- **UI:** React 19
+- **Stil:** Tailwind CSS v4
+- **Animasyon:** Framer Motion
+- **Smooth Scroll:** `@studio-freight/react-lenis`
+- **3D / Görsel Derinlik:** Three.js, React Three Fiber, Drei
+- **İkonlar:** Lucide React
+- **E-posta:** Nodemailer
+
+## Proje Yapısı
+
+```text
+src/
+  app/                  App Router sayfaları, layout ve API route'ları
+  components/
+    animations/         Motion, parallax, intro ve parçacık bileşenleri
+    layout/             Navbar ve Footer
+    sections/           Hero, Services, About, Contact, Appointment
+    ui/                 Paylaşılan arayüz yardımcıları
+  context/              Global arayüz durumları
+  hooks/                useGlow, useNeuroSound gibi deneyim hook'ları
+  lib/                  Yardımcı fonksiyonlar
+
+public/
+  videos/hero-bg.mp4    Hero arka plan videosu
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Kurulum
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Projeyi yerel ortamda çalıştırmak için:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install --legacy-peer-deps
+npm run dev
+```
 
-## Learn More
+Ardından tarayıcıda şu adresi açın:
 
-To learn more about Next.js, take a look at the following resources:
+```text
+http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Komutlar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev      # Geliştirme sunucusunu başlatır
+npm run build    # Üretim build'i alır
+npm run start    # Üretim sunucusunu başlatır
+npm run lint     # ESLint kontrollerini çalıştırır
+```
 
-## Deploy on Vercel
+## Geliştirme Notları
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Bu proje Next.js 16 kullanır. Kod yazmadan önce yerel dokümanlar `node_modules/next/dist/docs/` altından kontrol edilmelidir.
+- Tailwind CSS v4 kullanıldığı için eski Tailwind alışkanlıklarıyla yapılandırma eklenmemelidir.
+- Lenis zaten layout seviyesinde çalışır. CSS tarafında `scroll-smooth` kullanılmamalıdır.
+- Ana CTA butonlarında `MagneticElement`, etkileşimli kontrollerde `useNeuroSound`, cam yüzeylerde `glass-panel` ve gerekli yerlerde `useGlow` tercih edilmelidir.
+- Katman yapısı hassastır. Hero arka planı, parçacıklar ve içerik z-index hiyerarşisi korunarak geliştirilmelidir.
+- Saf siyah yerine `#1d1d1f`, ana marka rengi olarak `#1c648e`, arka plan için `#fbfbfd` kullanılmalıdır.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Kalite Standardı
+
+Yeni eklenen her bölüm, Luminous'un premium tasarım dilini sürdürmelidir: sakin, ferah, kontrollü hareketli, yüksek kontrastlı ama sert olmayan, psikoloji ve wellness alanına güven veren bir deneyim.
+
+Geliştirme sırasında amaç yalnızca çalışan bir arayüz üretmek değil; sitenin bütünsel hissini koruyarak daha rafine hale getirmektir.
+
+## Geliştirici
+
+Halil Baspi  
+GitHub: [github.com/halilbsp](https://github.com/halilbsp)
