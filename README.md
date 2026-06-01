@@ -97,3 +97,8 @@ Geliştirme sırasında amaç yalnızca çalışan bir arayüz üretmek değil; 
 
 Halil Baspi  
 GitHub: [github.com/halilbsp](https://github.com/halilbsp)
+
+<img width="1257" height="891" alt="Ekran görüntüsü 2026-06-01 143412" src="https://github.com/user-attachments/assets/84f90647-1def-427c-99f2-df80c8faea33" />
+<img width="1281" height="883" alt="Ekran görüntüsü 2026-06-01 143257" src="https://github.com/user-attachments/assets/31cacfe4-aed6-4ca8-935a-768fd097ce1c" />
+<img width="1226" height="891" alt="Ekran görüntüsü 2026-06-01 143428" src="https://github.com/user-attachments/assets/048a5cb6-0218-49e3-a949-f57114dbb5a6" />
+<img width="1141" height="690" alt="Ekran görüntüsü 2026-06-01 140101" src="https://github.com/user-attachments/assets/66e852c0-2b63-4a61-91f2-a35cd2cdb5b1" />
